@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .back-btn {
+        padding: 8px 4px;
+        margin-right: 4px;
+        font-size: 16px;
+      }
+      .next-btn {
+        padding: 8px 4px;
+        margin-left: 4px;
+        font-size: 16px;
+      }
+      .page-num {
+        margin: 0px 4px;
+        font-size: 16px;
+      }
+      .stretch-btn {
+        background-color: #027403;
+        padding: 8px 16px;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        transition: padding 1s;
+        cursor: pointer;
+      }
+      .stretch-btn:hover {
+        padding: 16px 32px;
+      }
+      .shadow-btn {
+        font-size: 18px;
+        color: white;
+        background-color: #027403;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        transition: box-shadow 0.15s, margin 0.15s;
+      }
+      .shadow-btn:hover {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+      .shadow-btn:active {
+        margin-top: 3px;
+        margin-left: 3px;
+        box-shadow: none;
+      }
+      .number-btn {
+        background-color: #027403;
+        padding: 8px 16px;
+        margin: 0px 8px;
+        border: none;
+        font-size: 18px;
+        color: white;
+        transition: padding 0.15s, margin 0.15s;
+        cursor: pointer;
+      }
+
+      .number-btn:hover {
+        padding: 8px 24px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>Pagination</h3>
+      <div>
+        <button class="back-btn">Back</button>
+        <a class="page-num" href="">1</a><a class="page-num" href="">2</a
+        ><a class="page-num" href="">3</a><a class="page-num" href="">4</a
+        ><a class="page-num" href="">5</a>
+        <button class="next-btn">Next</button>
+      </div>
+    </div>
+    <div>
+      <h3>Stretch</h3>
+      <button class="stretch-btn">Stretch</button>
+    </div>
+    <div>
+      <h3>Shadow</h3>
+      <button class="shadow-btn">Shadow</button>
+    </div>
+    <div>
+      <h3>Margin and padding together</h3>
+      <button class="number-btn">One</button>
+      <button class="number-btn">Two</button>
+      <button class="number-btn">Three</button>
+    </div>
+  </body>
 </html>
