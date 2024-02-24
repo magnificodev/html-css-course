@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7g</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+        margin: 8px;
+        font-family: Arial;
+      }
+
+      .img {
+        width: 46px;
+        height: 46px;
+        border-radius: 23px;
+        vertical-align: middle;
+      }
+
+      .status {
+        outline: none;
+        border: none;
+        vertical-align: middle;
+        margin-left: 8px;
+        width: 250px;
+      }
+
+      .status::placeholder {
+        font-size: 16px;
+      }
+
+      .tweet-btn {
+        background-color: #4085ca;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="cat.jpg" alt="" class="img" />
+      <input type="text" class="status" placeholder="What's happening?" />
+      <button class="tweet-btn">Tweet</button>
+    </div>
+  </body>
+</html>
