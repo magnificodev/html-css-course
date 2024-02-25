@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9f</title>
+    <title>10d</title>
     <style>
       * {
         margin: 0;
@@ -14,7 +14,7 @@
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
         display: inline-block;
         border-radius: 4px;
-        overflow: hidden
+        overflow: hidden;
       }
 
       .cat-img {
@@ -34,13 +34,29 @@
         margin: 12px 0 4px;
       }
 
+      .mutual-row {
+        margin-bottom: 8px;
+      }
+
+      .mutual-friend-img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        border-radius: 12px;
+        object-position: center;
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+
       .cat-mutual-friend {
         font-size: 15px;
         color: rgb(92, 92, 92);
-        margin-bottom: 12px;
+        display: inline-block;
+        vertical-align: middle;
       }
 
       .add-friend-btn {
+        display: block;
         border: none;
         background-color: #2d5db9;
         color: white;
@@ -56,7 +72,10 @@
       <img src="cat1.jpg" alt="" class="cat-img" />
       <div class="cat-info">
         <p class="cat-name">Oliver</p>
-        <p class="cat-mutual-friend">2 mutual friends</p>
+        <div class="mutual-row">
+          <img src="dog.avif" alt="" class="mutual-friend-img" />
+          <p class="cat-mutual-friend">2 mutual friends</p>
+        </div>
         <button class="add-friend-btn">Add Friend</button>
       </div>
     </div>
@@ -64,7 +83,10 @@
       <img src="cat2.jpg" alt="" class="cat-img" />
       <div class="cat-info">
         <p class="cat-name">Tom</p>
-        <p class="cat-mutual-friend">1 mutual friends</p>
+        <div class="mutual-row">
+          <img src="dog.avif" alt="" class="mutual-friend-img" />
+          <p class="cat-mutual-friend">3 mutual friends</p>
+        </div>
         <button class="add-friend-btn">Add Friend</button>
       </div>
     </div>
@@ -72,7 +94,10 @@
       <img src="cat3.jpg" alt="" class="cat-img" />
       <div class="cat-info">
         <p class="cat-name">Mimi</p>
-        <p class="cat-mutual-friend">3 mutual friends</p>
+        <div class="mutual-row">
+          <img src="dog.avif" alt="" class="mutual-friend-img" />
+          <p class="cat-mutual-friend">4 mutual friends</p>
+        </div>
         <button class="add-friend-btn">Add Friend</button>
       </div>
     </div>
