@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial;
+        margin: 0;
+      }
+      .video-preview {
+        width: 300px;
+        display: inline-block;
+        margin: 8px 4px;
+      }
+      .thumbnail {
+        width: 100%;
+      }
+
+      .video-title {
+        font-size: 16px;
+        font-weight: bold;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin: 12px 0;
+      }
+
+      .video-author {
+        color: rgb(69, 69, 69);
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .video-stats {
+        color: rgb(69, 69, 69);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="video-preview">
+      <img
+        class="thumbnail"
+        src="../../day03/lessons/thumbs/thumb.webp"
+        alt="Thumbnail"
+      />
+      <p class="video-title">
+        Talking Tech and AI with Google CEO Sundar Pichai!
+      </p>
+      <p class="video-author">Marques Brownlee</p>
+      <p class="video-stats">3.4M views &#183; 6 months ago</p>
+    </div>
+    <div class="video-preview">
+      <img class="thumbnail" src="thumb2.webp" alt="Thumbnail" />
+      <p class="video-title">
+        Easy English Podcast Talking About Past Simple Tense Of "Tobe" (Episode
+        2)
+      </p>
+      <p class="video-author">English Easy Podcast</p>
+      <p class="video-stats">653k views &#183; 4 months ago</p>
+    </div>
+  </body>
+</html>
