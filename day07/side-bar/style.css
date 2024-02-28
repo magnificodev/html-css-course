@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+  position: relative;
+  background: url("./images/bg.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.main_box .sidebar_menu {
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+  transform: translateX(-280px);
+  transition: transform 0.4s;
+}
+
+.sidebar_menu .logo {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .logo a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  position: absolute;
+  left: 50px;
+  line-height: 60px;
+}
+
+.sidebar_menu .menu {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  transition: all 0.1s ease-out;
+}
+
+.sidebar_menu .menu i {
+  font-size: 20px;
+  color: #fff;
+  width: 30px;
+  text-align: left;
+}
+
+.sidebar_menu .menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  padding: 14px 20px;
+}
+
+.sidebar_menu .menu li:hover {
+  border-left: 2px solid #fff;
+  width: calc(100% - 2px);
+  transform: translateX(2px);
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu .social_media {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar_menu .social_media i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s linear;
+}
+
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+}
+
+#check {
+  display: none;
+}
+
+.btn_one i {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  font-weight: 700;
+  line-height: 60px;
+  left: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn_one i:hover {
+  opacity: 1;
+}
+
+.btn_two i {
+  font-size: 28px;
+  position: absolute;
+  right: 24px;
+  line-height: 60px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.btn_two i:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+#check:checked ~ .sidebar_menu {
+  transform: translateX(0px);
+}
+
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}

@@ -13,17 +13,47 @@
       }
 
       .container {
-        width: 100px; 
-        height: 100px;
-        transform: rotateX(180deg);
+        width: 500px;
+        height: 500px;
         background-color: lightblue;
-        backface-visibility: visible;
+      }
+
+      .wrapper {
+        width: 300px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+
+      .wrapper:hover {
+        transform: rotateY(180deg);
+      }
+
+      .item1 {
+        height: 100%;
+        width: 100%;
+        background-color: lightpink;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+
+      .item2 {
+        height: 100%;
+        width: 100%;
+        background-color: lightgreen;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="item">div</div>
+      <div class="wrapper">
+        <div class="item1">div1</div>
+        <div class="item2">div2</div>
+      </div>
     </div>
   </body>
 </html>
