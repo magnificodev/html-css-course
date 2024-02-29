@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  background-color: #010313;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu .logo a {
+  text-decoration: none;
+  font-size: 35px;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav .menu ul {
+  padding: 0;
+  display: flex;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.img {
+  background: url(./images/camera.jpg) no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.center {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center .title {
+  font-size: 42px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.center .buttons {
+  margin-top: 18px;
+}
+
+.buttons :is(button) {
+  padding: 8px 28px;
+  font-size: 18px;
+  font-weight: 450;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 8px;
+  border: 2px solid #fff;
+  transition: opacity 0.15s linear;
+}
+
+.buttons .learn-more-btn {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+.buttons .learn-more-btn:hover {
+  opacity: 0.8;
+}
+
+.buttons .subcribe-btn:hover {
+  opacity: 0.8;
+}

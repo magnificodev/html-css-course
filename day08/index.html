@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tips & Tricks</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 200px;
+        height: 200px;
+        border: 1px solid gray;
+        perspective: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search {
+        padding: 8px 16px;
+        border: 1px solid lightcoral;
+        caret-color: lightcoral;
+        color: lightcoral;
+        font-size: 16px;
+      }
+
+      .search:focus {
+        outline: 1px solid lightcoral 
+      }
+
+      .search::placeholder {
+        font-size: 16px;
+        color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" class="search" placeholder="Search...">
+    </div>
+  </body>
+</html>
