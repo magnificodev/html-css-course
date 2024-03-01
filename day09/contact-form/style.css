@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #3E1F8F;
+  --text-gray: #a7a7a7;
+  --input-bgr-color: #F0F1F8;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #C9E7E8;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px 60px 40px 40px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 5px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.container .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .left-side {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content .left-side::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--text-gray);
+  width: 3px;
+  right: -15px;
+  height: 70%;
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: 1px;
+}
+
+.left-side .contact {
+  text-align: center;
+}
+
+.left-side .contact:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.left-side .contact i {
+  font-size: 32px;
+  color: var(--primary-color)
+}
+
+.left-side .contact .contact-name {
+  font-size: 18px;
+  font-weight: 550;
+  margin-top: 8px;
+}
+
+.left-side .contact :is(.text-one, .text-two) {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-gray);
+}
+
+.content .right-side {
+  width: 75%;
+  height: 100%;
+  margin-left: 75px;
+}
+
+.right-side .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color)
+}
+
+.right-side .sub-title {
+  font-size: 19px;
+  color: rgb(80, 80, 80);
+}
+
+.right-side form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.right-side form .input-box {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--input-bgr-color);
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 16px;
+}
+
+.right-side form .input-box::placeholder {
+  font-size: 18px;
+  color: var(--text-gray);
+}
+
+.right-side form .message {
+  resize: none;
+  height: 150px;
+}
+
+.right-side form .send-btn {
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.right-side form .send-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    margin: 40px 0;
+    height: 100%;
+  }
+
+  .container .content {
+    flex-direction: column-reverse;
+  }
+
+  .content .left-side {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .content .left-side::after {
+    display: none;
+  }
+
+  .left-side .contact:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .content .right-side {
+    margin: 0;
+  }
+
+  .right-side form .send-btn {
+    width: 100%;
+  }
+}
