@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, #1cc7d0, #2ede98);
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 320px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+}
+
+.container:hover > .font-face {
+  transform: rotateY(-180deg);
+}
+
+.container:hover > .back-face {
+  transform: rotateY(0deg);
+}
+
+.container .font-face {
+
+}
+
+.font-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.container .back-face {
+  transform: rotateY(180deg);
+}
+
+.back-face .profile-img {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 6px;
+  background-image: linear-gradient(375deg, #1cc7d0, #2ede98);
+}
+
+.back-face .personal-info {
+  text-align: center;
+}
+
+.personal-info .name {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.personal-info .job {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.back-face .contact a {
+  display: inline-block;
+  margin: 0 2px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #1cc7d0;
+  background-image: linear-gradient(375deg, #1cc7d0, #2ede98);
+  transition: all 0.2s ease;
+}
+
+.back-face .contact a:hover {
+  color: #1cc7d0;
+  border-color: #1cc7d0;
+  background: linear-gradient(375deg, transparent, transparent);
+}
