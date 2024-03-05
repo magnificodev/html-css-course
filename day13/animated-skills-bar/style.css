@@ -49,6 +49,8 @@ body {
   left: 0;
   border-radius: inherit;
   background-color: #4171ED;
+  opacity: 0;
+  animation: progress 0.4s ease-in-out forwards;
 }
 
 .current .value {
@@ -74,4 +76,14 @@ body {
   border-top: 6px solid #4171ED;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
+}
+
+@keyframes progress {
+  0% {
+    opacity: 1;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
