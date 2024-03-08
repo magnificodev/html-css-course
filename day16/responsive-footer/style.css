@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  color: #fff;
+  background-color: #c72709;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: linear-gradient(90deg, #0f0e10, #121113 40%);
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.main .box {
+  margin-top: 32px;
+}
+
+.main .box .lower {
+  margin-top: 24px;
+}
+
+.main .box,
+.main .box :is(.upper, .lower) {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .box .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #eee;
+  margin-bottom: 10px;
+}
+
+.main .box :is(p, a) {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.main .left {
+  width: 40%;
+}
+
+.left .upper p {
+  width: 80%;
+}
+
+.left .lower a,
+.middle a {
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.left .lower a:hover,
+.middle a:hover {
+  color: #c72709;
+}
+
+.left .lower a i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.main .middle {
+  width: 30%;
+}
+
+.main .right {
+  width: 30%;
+}
+
+.right form {
+  margin-top: 6px;
+}
+
+.right form .input-box {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 16px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.input-box input[type="email"] {
+  padding-left: 16px;
+  color: #ccc;
+  background-color: #0f0e10;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid #555;
+  caret-color: #555;
+  transition: all 0.3s ease;
+}
+
+.input-box input[type="email"]:focus {
+  border-color: #777;
+}
+
+.input-box input[type="submit"] {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #c72709;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-box input[type="submit"]:hover {
+  color: #c72709;
+  background-color: transparent;
+  border-color: #c72709;
+}
+
+.right .icon-list {
+  display: flex;
+  margin-top: 8px;
+  list-style: none;
+}
+
+.icon-list li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 4px;
+  border: 1px solid #555;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.icon-list li a:hover {
+  color: #c72709;
+  border-color: currentColor;
+}
+
+.icon-list li a i {
+  font-size: 18px;
+}
+
+.ending {
+  margin: 16px 0 28px;
+  text-align: right;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.ending .web-name {
+  color: #c72709;
+}
+
+@media (max-width: 950px) {
+  .main .box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 560px) {
+  .main .box {
+    width: 100%;
+  }
+
+  .right .icon-list {
+    justify-content: center;
+  }
+
+  .ending {
+    text-align: center;
+    margin: 24px 0;
+  }
+}
