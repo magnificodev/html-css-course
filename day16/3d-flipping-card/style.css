@@ -38,10 +38,6 @@ body {
   transform-style: preserve-3d;
 }
 
-.front-face {
-  
-}
-
 .container:hover .front-face {
   transform: rotateY(180deg);
 }
