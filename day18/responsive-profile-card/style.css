@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  background-color: #8E44AD;
+  color: #fff;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #8E44AD
+}
+
+.container {
+  max-width: 1100px;  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(100% / 3 - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: justify;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-img {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: #8E44AD;
+}
+
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  border: 2px solid #fff;
+}
+
+.card .card-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E44AD;
+  margin-top: 18px;
+}
+
+.card .card-intro {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.card .card-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-buttons button {
+  width: calc(100% / 2 - 4px);
+  height: 45px;
+  border-radius: 6px;
+  border: 2px solid #8E44AD;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  color: #fff;
+  background-color: #8E44AD;
+  cursor: pointer;
+}
+
+.card-buttons button.read-more {
+  background-color: transparent;
+  color: #8E44AD;
+}
+
+.card-buttons button.read-more:hover {
+  color: #fff;
+  background-color: #8E44AD;
+}
+
+.card-buttons button.subscribe:hover {
+  background-color: rgb(130, 26, 175)
+}
+
+@media (max-width: 1045px) {
+  .container {
+    padding: 20px;
+  }
+
+  .card {
+    width: calc(100% / 2 - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0
+  }
+}
