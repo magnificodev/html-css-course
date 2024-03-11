@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  background-color: #FEE6EB;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #E6E6E6;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  clip-path: circle(55% at right 30%);
+  background-image: linear-gradient(to bottom, #F6416C, #FD9BB0);
+}
+
+.container {
+  position: relative;
+  max-width: 750px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.container::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(65% at right 35%);
+  background-image: linear-gradient(135deg, #FD9BB0 10%, #F6416C);
+  border-radius: inherit;
+}
+
+.left, .right {
+  z-index: 10;
+}
+
+.left {
+  padding: 35px 5px 0 35px;
+  height: 100%;
+}
+
+.left .title {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.left .msg {
+  font-size: 13px;
+  font-weight: 500;
+  color: #777;
+}
+
+.left .old-price {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  margin-top: 16px;
+  margin-left: 4px;
+  font-size: 20px;
+  color: #777;
+}
+
+.left .old-price::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #777;
+}
+
+.left .new-price {
+  font-size: 30px;
+  color: #FC6989;
+}
+
+.left .add-btn {
+  padding: 8px 16px;
+  margin-top: 55px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #00E6E6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.left .add-btn:hover {
+  scale: 0.98;
+}
+
+.right .image-box {
+  text-align: right;
+  position: relative;
+  right: 0;
+  bottom: 27px;
+  height: 100%;
+  margin-bottom: 18px;
+}
+
+.right .image {
+  width: 430px;
+  height: 340px;
+}
+
+.right .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.right .product {
+  margin-right: 35px;
+}
+
+.product .product-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #c9032e;
+}
+
+.product .product-model {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.product .product-shipping {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.product .btn-login {
+  padding: 8px 17px;
+  margin-top: 18px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.product .btn-login:hover {
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.5)
+}
