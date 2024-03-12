@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #647df9;
+}
+
+.container {
+  max-width: 1090px;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  width: calc(100% / 3 - 20px);
+  padding: 15px 30px 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box .price-box {
+  padding: 12px 0 16px;
+  text-align: center;
+  color: #fff;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.box.basic .price-box,
+.box.basic .purchase-btn button {
+  background-color: #14eb6e;
+}
+
+.box.extended .price-box,
+.box.extended .purchase-btn button {
+  background-color: #E87130;
+}
+
+.box.premium .price-box,
+.box.premium .purchase-btn button {
+  background-color: #11BCC3;
+}
+
+.price-box .type {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.price-box .price {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price-box .price .bigger-price {
+  font-size: 45px;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.box .msg {
+  margin-top: 24px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.box .features {
+  margin-top: 12px;
+  list-style: none;
+}
+
+.features li {
+  border-top: 1px solid #ccc;
+  padding: 12px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features li > i {
+  font-size: 18px;
+}
+
+.features li.yes > i {
+  color: #0fb956;
+}
+
+.features li.no > i {
+  color: #de0303;
+}
+
+.box .purchase-btn button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.box .purchase-btn button:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 1000px) {
+  .container .box {
+    width: calc(100% / 2 - 16px);
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 715px) {
+  .container .box {
+    width: calc(100%);
+    margin-bottom: 20px;
+  }
+
+  .container .box:first-child {
+    margin-top: 20px;
+  }
+}
