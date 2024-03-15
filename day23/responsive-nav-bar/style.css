@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #1C1C1C;
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 34px;
+  font-weight: 600;
+  color: #fff;
+}
+
+header .links {
+  display: flex;
+  list-style: none;
+}
+
+.links a {
+  display: block;
+  padding: 8px 16px;
+  margin-left: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links a.active,
+.links a:hover {
+  color: #1C1C1C;
+  background-color: #fff;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .content {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#check {
+  display: none;
+}
+
+nav label {
+  display: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+label:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 920px) {
+
+  header .links {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #121113;
+    transition: all 0.3s ease;
+  }
+
+  header .links a {
+    transform: translateX(-800px);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #check:checked ~ nav label.open {
+    display: none;
+  }
+  
+  #check:checked ~ nav label.close {
+    display: block;
+  }
+
+  #check:checked ~ nav .links {
+    left: 0;
+  }
+
+  #check:checked ~ nav .links a {
+    transform: translateX(0%);
+  }
+
+  .links a {
+    margin-top: 32px;
+  }
+
+  .links a.active,
+  .links a:hover {
+    background-color: unset;
+    color: #50D7CD;
+  }
+
+  label.open {
+    display: block;
+  }
+
+}
