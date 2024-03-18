@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6f7fb;
+}
+
+.container {
+  min-width: 34%;
+  padding: 32px 112px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .result-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result-box .result {
+  width: 100px;
+}
+
+.result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.result.user {
+  transform: rotate(90deg);
+}
+
+.result.user img {
+  transform-origin: 30% 90%;
+}
+
+.result.computer {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result.computer img {
+  transform-origin: 70% 90%;
+}
+
+.container .message {
+  margin-top: 24px;
+  margin-bottom: 42px;
+  font-size: 32px;
+  color: #7d2ae8;
+  text-align: center;
+}
+
+.container .selection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selection .option {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.selection .option.checked {
+  opacity: 1;
+}
+
+.selection .option:hover {
+  opacity: 1;
+}
+
+.option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.option span {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #7d2ae8;
+}
+
+@keyframes upDown {
+  50% {
+    transform: rotate(8deg);
+  }
+}
