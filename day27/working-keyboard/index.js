@@ -1,16 +1,9 @@
-const toggleBtn = document.querySelector(".toggle")
-const socialList = document.querySelector(".social-list")
+const inputKeys = document.querySelectorAll("input");
+const screen = document.querySelector(".screen");
 
 
-
-// EVENT LISTENERS
-toggleBtn.addEventListener("click", () => {
-  if (toggleBtn.className.includes("closed")) {
-    toggleBtn.classList.remove("closed");
-    socialList.style.left = 0;
-  }
-  else {
-    toggleBtn.classList.add("closed")
-    socialList.style.left = "-200px";
-  }
-})
+inputKeys.forEach(key => key.addEventListener("click", (e) => {
+  let value = e.currentTarget.value === "SPACE" ? " " : e.currentTarget.value;
+  let html = screen.innerHTML;
+  screen.innerHTML = `${html}${String(value).toLowerCase()}`
+}))
