@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E3F2FD;
+}
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.container .social-list {
+  position: relative;
+  left: -100%;
+  padding: 12px;
+  list-style: none;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-list li:not(:last-child) .social-item {
+  margin-bottom: 12px;
+}
+
+.social-list .social-item {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-item .tooltip {
+  position: absolute;
+  padding: 4px 8px;
+  left: 55px;
+  top: 50%;
+  transform: translateY(-100%);
+  font-size: 14px;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.social-item:hover .tooltip {
+  transform: translateY(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-item .tooltip::before {
+  position: absolute;
+  content: "";
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 8px solid #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.social-list .social-item:hover {
+  opacity: 0.8;
+}
+
+.social-list .social-item.pinterest {
+  background-color: #E7082A;
+}
+
+.social-list .social-item.linkedin {
+  background-color: #126BC4;
+}
+
+.social-list .social-item.youtube {
+  background-color: #FF0808;
+}
+
+.social-list .social-item.dribbble {
+  background-color: #DF5188;
+}
+
+.social-list .social-item.github {
+  background-color: #080808;
+}
+
+.social-list .social-item.facebook {
+  background-color: #106AFF;
+}
+
+.social-list .social-item.twitter {
+  background-color: #249EF0;
+}
+
+.social-list .social-item:hover {
+  opacity: 0.8;
+}
+
+.social-list .social-item.pinterest .tooltip {
+  color: #E7082A;
+}
+
+.social-list .social-item.linkedin .tooltip {
+  color: #126BC4;
+}
+
+.social-list .social-item.youtube .tooltip {
+  color: #FF0808;
+}
+
+.social-list .social-item.dribbble .tooltip {
+  color: #DF5188;
+}
+
+.social-list .social-item.github .tooltip {
+  color: #080808;
+}
+
+.social-list .social-item.facebook .tooltip {
+  color: #106AFF;
+}
+
+.social-list .social-item.twitter .tooltip {
+  color: #249EF0;
+}
+
+.container .toggle {
+  width: 35px;
+  height: 35px;
+  margin-top: 18px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #DE0611;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .toggle.closed {
+  background-color: #8E36FF;
+}
+
+.container .toggle:hover {
+  opacity: 0.8;
+}
+
+.container .toggle i {
+  transition: all 0.3s ease;
+}
+
+.container .toggle i {
+  transform: rotate(45deg);
+}
+
+.container .toggle.closed i {
+  transform: rotate(0deg);
+}
