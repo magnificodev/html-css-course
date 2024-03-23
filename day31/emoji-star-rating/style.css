@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#f9c750, #ffb300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.container {
+  max-width: 360px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.container .rating {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating .emojis {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.emojis .emoji {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  transition: all 0.3s ease;
+}
+
+.rating .star-rating {
+  margin-top: 16px;
+  display: flex;
+  column-gap: 12px;
+}
+
+.star-rating label {
+  color: #ccc;
+  font-size: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .message {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+
+.message .text::before {
+  content: "Rate your experience";
+}
+
+.message .number::before {
+  content: "0 out of 5";
+}
+
+#star1:checked ~ .message .text::before {
+  content: "I just hate it";
+}
+
+#star1:checked ~ .message .number::before {
+  content: "1 out of 5";
+}
+
+#star2:checked ~ .message .text::before {
+  content: "I don't like it";
+}
+
+#star2:checked ~ .message .number::before {
+  content: "2 out of 5";
+}
+
+#star3:checked ~ .message .text::before {
+  content: "This is awesome";
+}
+
+#star3:checked ~ .message .number::before {
+  content: "3 out of 5";
+}
+
+#star4:checked ~ .message .text::before {
+  content: "I just like it";
+}
+
+#star4:checked ~ .message .number::before {
+  content: "4 out of 5";
+}
+
+#star5:checked ~ .message .text::before {
+  content: "I just love it";
+}
+
+#star5:checked ~ .message .number::before {
+  content: "5 out of 5";
+}
+
+#star1:checked ~ .rating .emojis .emoji {
+  top: calc(-150px * 0);
+}
+
+#star2:checked ~ .rating .emojis .emoji {
+  top: calc(-150px * 1);
+}
+
+#star3:checked ~ .rating .emojis .emoji {
+  top: calc(-150px * 2);
+}
+
+#star4:checked ~ .rating .emojis .emoji {
+  top: calc(-150px * 3);
+}
+
+#star5:checked ~ .rating .emojis .emoji {
+  top: calc(-150px * 4);
+}
+
+#star1:hover ~ .rating .star-rating label.star1,
+#star1:checked ~ .rating .star-rating label.star1,
+
+#star2:hover ~ .rating .star-rating label.star1,
+#star2:hover ~ .rating .star-rating label.star2,
+#star2:checked ~ .rating .star-rating label.star1,
+#star2:checked ~ .rating .star-rating label.star2,
+
+#star3:hover ~ .rating .star-rating label.star1,
+#star3:hover ~ .rating .star-rating label.star2,
+#star3:hover ~ .rating .star-rating label.star3,
+#star3:checked ~ .rating .star-rating label.star1,
+#star3:checked ~ .rating .star-rating label.star2,
+#star3:checked ~ .rating .star-rating label.star3, 
+
+#star4:hover ~ .rating .star-rating label.star1,
+#star4:hover ~ .rating .star-rating label.star2,
+#star4:hover ~ .rating .star-rating label.star3,
+#star4:hover ~ .rating .star-rating label.star4,
+#star4:checked ~ .rating .star-rating label.star1,
+#star4:checked ~ .rating .star-rating label.star2,
+#star4:checked ~ .rating .star-rating label.star3,
+#star4:checked ~ .rating .star-rating label.star4,
+
+#star5:hover ~ .rating .star-rating label.star1,
+#star5:hover ~ .rating .star-rating label.star2,
+#star5:hover ~ .rating .star-rating label.star3,
+#star5:hover ~ .rating .star-rating label.star4,
+#star5:hover ~ .rating .star-rating label.star5,
+#star5:checked ~ .rating .star-rating label.star1,
+#star5:checked ~ .rating .star-rating label.star2,
+#star5:checked ~ .rating .star-rating label.star3,
+#star5:checked ~ .rating .star-rating label.star4,
+#star5:checked ~ .rating .star-rating label.star5 {
+  color: #FFDD44;
+}
