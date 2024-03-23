@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #F5A62A 10%, #B72D1F 80% );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container .name {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.container .desc {
+  font-size: 18px;
+}
+
+.container .buttons {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  outline: none;
+  border: 1px solid #666;
+  background-color: #F33C2A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:focus {
+  opacity: 0.8;
+}
+
+.buttons .pages {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.pages .button {
+  width: 46px;
+}
+
+.pages li:not(:last-child) .button {
+  border-right: none;
+}
+
+.button.pre,
+.button.next {
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+}
+
+.button.pre {
+  border-right: none;
+}
+
+.button.next {
+  border-left: none;
+}
