@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#check {
+  display: none;
+}
+
+.dark-mode {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+.dark-mode .toggle-btn {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #bbb;
+}
+
+.toggle-btn .circle {
+  width: 30px;
+  height: 30px;
+  transform: translateX(5px);
+  text-align: center;
+  line-height: 30px;
+  border-radius: inherit;
+  font-size: 16px;
+  color: #555;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  transition: all 0.3s ease;
+}
+
+.circle span.dark {
+  display: none;
+}
+
+#check:checked ~ .dark-mode > .toggle-btn {
+  background-color: #080808;
+}
+
+#check:checked ~ .dark-mode .toggle-btn .circle {
+  transform: translateX(45px);
+}
+
+#check:checked ~ .dark-mode .toggle-btn .circle span.dark {
+  display: inline;
+}
+
+#check:checked ~ .dark-mode .toggle-btn .circle span.light {
+  display: none;
+}
+
+#check:checked ~ .container {
+  background-color: #0A1822;
+}
+
+#check:checked ~ .container .calculator {
+  background-color: #0A1822;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+#check:checked ~ .container .calculator .screen {
+  text-shadow: 0 0 3px lightcoral;
+  background-color: #0A1822;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.2);
+}
+
+#check:checked ~ .container .calculator .buttons input {
+  background-color: #0A1822;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+#check:checked ~ .container .calculator .buttons input:focus {
+  background-color: #0A1822;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DEE1E8;
+  transition: all 0.3s ease;
+}
+
+.calculator {
+  max-width: 320px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #DEE1E8;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15), -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.calculator .screen {
+  width: 100%;
+  height: 80px;
+  padding: 12px 16px;
+  font-size: 20px;
+  font-weight: 500;
+  color: lightcoral;
+  text-align: right;
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-color: #DEE1E8;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.calculator .buttons {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.buttons .button-row {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.buttons .button-row input {
+  width: calc(100% / 4);
+  height: 56px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  background-color: #DEE1E8;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15), -1px -1px 5px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.buttons .button-row input:focus {
+  color: lightcoral;
+  box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset 2px 2px 5px rgba(0, 0, 0, 0.15), inset -1px -1px 5px rgba(255, 255, 255, 0.8);
+}
